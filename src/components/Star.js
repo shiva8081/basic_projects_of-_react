@@ -4,35 +4,21 @@ import { FaStar } from 'react-icons/fa'
 export const Star = ({no_ofstar}) => {
    const [rating, setrating] = useState(0);
    const [hover, sethover] = useState(0);
-
-
-    const handleclick=(getcurrentindex)=>{
-      setrating(getcurrentindex);
-    //   console.log(getcurrentindex);
-    }
-    const onmousemove=(getcurrentindex)=>{
-        sethover(getcurrentindex)
-      
-    }
-
-    const onmouseleave=()=>{
-       
-       
-        sethover(rating);
-    }
+ 
   return (
-    <div className='flex cursor-pointer'>{
+    <div className='flex justify-center cursor-pointer'>{
         [...Array(no_ofstar)].map((_,index)=>{
             const starvalue=index+1;
        
            return(
             <FaStar
-            className={starvalue<=(rating||hover)?'text-[#fff900]':'text-black'}
+            className={starvalue<=(hover||rating)?'text-[#fff900]':'text-black'}
             key={index}
-            onClick={()=>handleclick(starvalue)}
-            onMouseMove={()=>onmousemove(starvalue)}
-            onMouseLeave={()=>onmouseleave()}
-            // style={{color:starColor}}
+            onClick={()=>setrating(starvalue)}
+            onMouseMove={()=>sethover(starvalue)}
+            onMouseLeave={()=>{sethover(rating)
+                sethover(rating)}}
+       
             
             
             size={40}
@@ -47,3 +33,32 @@ export const Star = ({no_ofstar}) => {
  
 
 
+// import { useState } from "react"
+// import { FaStar } from "react-icons/fa"
+
+// export const Star = ({}) => {
+//   const no_ofstar = 10
+//   const [rating, setrating] = useState(0);
+//   const [hover, sethover] = useState(0);
+//   return (
+//     <div className="flex cursor-pointer">
+//       {[...Array(no_ofstar)].map((_, index) => {
+//         const starvalue = index + 1
+
+//         return (
+//           <FaStar
+//             className={`${starvalue <= hover ? "text-[#fff900]" : "text-black"}`}
+//             key={index}
+//             onClick={() => setrating(starvalue)}
+//             onMouseMove={() => sethover(starvalue)}
+//             onMouseLeave={() => {
+//               setrating(rating)
+//               sethover(rating)
+//             }}
+//             size={40}
+//           />
+//         )
+//       })}
+//     </div>
+//   )
+// }
