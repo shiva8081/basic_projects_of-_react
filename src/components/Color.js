@@ -13,8 +13,8 @@ export const Color = () => {
     const r=random(256)
     const g=random(256)
     const b=random(256)
-    const rgbcolo=`rgb(${r},${g},${b})`;
-    console.log(`rgb(${r},${g},${b})`)
+  
+
     setcolor(`rgb(${r},${g},${b})`)
   }
    
@@ -24,8 +24,7 @@ export const Color = () => {
     for(let i=0;i<6;i++){
       hexcolor+=hex[random(hex.length)];
     }
-    const hexcolo=hexcolor
-    console.log(hexcolor)
+
     setcolor(hexcolor)
   }
   useEffect(()=>{

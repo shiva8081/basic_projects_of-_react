@@ -1,11 +1,14 @@
 
 import './App.css';
 import { Color } from './components/Color';
+import { Star } from './components/Star';
 
 function App() {
   return (
     <>
-    <Color/>
+    {/* {color changing app} */}
+    {/* <Color/> */}
+    <Star no_ofstar={5}/>
     </>
   );
 }
