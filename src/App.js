@@ -8,7 +8,7 @@ function App() {
     <>
     {/* {color changing app} */}
     {/* <Color/> */}
-    <Star no_ofstar={5}/>
+    <Star no_ofstar={10}/>
     </>
   );
 }

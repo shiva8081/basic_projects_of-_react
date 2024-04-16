@@ -8,7 +8,7 @@ export const Star = ({no_ofstar}) => {
 
     const handleclick=(getcurrentindex)=>{
       setrating(getcurrentindex);
-      console.log(getcurrentindex);
+    //   console.log(getcurrentindex);
     }
     const onmousemove=(getcurrentindex)=>{
         sethover(getcurrentindex)
@@ -18,19 +18,21 @@ export const Star = ({no_ofstar}) => {
     const onmouseleave=()=>{
        
        
-        sethover(0);
+        sethover(rating);
     }
   return (
-    <div>{
+    <div className='flex cursor-pointer'>{
         [...Array(no_ofstar)].map((_,index)=>{
             const starvalue=index+1;
+       
            return(
             <FaStar
-            className={starvalue<=(rating||hover)?'text=[#fff900]':'text-black'}
+            className={starvalue<=(rating||hover)?'text-[#fff900]':'text-black'}
             key={index}
             onClick={()=>handleclick(starvalue)}
             onMouseMove={()=>onmousemove(starvalue)}
             onMouseLeave={()=>onmouseleave()}
+            // style={{color:starColor}}
             
             
             size={40}
