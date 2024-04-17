@@ -1,7 +1,9 @@
 
 import './App.css';
+
 import { Color } from './components/Color';
 import { Star } from './components/Star';
+import { Accordian } from './components/accordian/Accordian';
 
 function App() {
   return (
@@ -11,7 +13,10 @@ function App() {
     {/* <Color/> */}
 
     {/* star rating app   */}
-    <Star no_ofstar={10}/>
+    {/* <Star no_ofstar={10}/> */}
+
+    {/* accordian  */}
+    <Accordian/>
     </div>
   );
 }
