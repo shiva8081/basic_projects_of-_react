@@ -4,6 +4,7 @@ import './App.css';
 import { Color } from './components/Color';
 import { Star } from './components/Star';
 import { Accordian } from './components/accordian/Accordian';
+import { Slidebar } from './components/slide_bar/Slidebar';
 
 function App() {
   return (
@@ -16,7 +17,12 @@ function App() {
     {/* <Star no_ofstar={10}/> */}
 
     {/* accordian  */}
-    <Accordian/>
+    {/* <Accordian/> */}
+
+    {/* slide bar  */}
+    <Slidebar url="https://picsum.photos/v2/list" page="1" limit="10" />
+
+
     </div>
   );
 }
