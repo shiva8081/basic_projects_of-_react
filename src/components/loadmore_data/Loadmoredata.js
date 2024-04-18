@@ -37,14 +37,14 @@ export const Loadmoredata = () => {
 
 
     return (
-        <div className='flex  gap-5'>
+        <div className='flex flex-col  gap-5'>
             <div className='grid grid-cols-4 gap-3'>
             {
                 loading ? <div>Loading... please wait</div> : error ? <div>Error: {error}</div> : <div>{
                     products && products.length > 0 ?
                         products.map(item => (
                         <div className='flex flex-col rounded-lg shadow-md justify-center items-center gap-5 w-[250px]   p-5 border-2 border-black' key={item.id}>
-                            <img className='w-[180px] h-[180px]' src={item.thumbnail} alt={item.title}/>
+                            <img className='w-full h-[180px]' src={item.thumbnail} alt={item.title}/>
                             <h3>{item.title}</h3>
                         </div>)) : "no data to show "
 
