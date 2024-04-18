@@ -12,12 +12,12 @@ export const Loadmoredata = () => {
         try {
             setloading(true)
 
-            const response = await fetch(`https://dummyjson.com/products`);
+            const response = await fetch(`https://dummyjson.com/products?limit=20&skip=20`);
             const data = await response.json();
             console.log(data);
 
-            if (data) {
-                setproducts(data);
+            if (data||data.products||data.products.length) {
+                setproducts(data.products);
                 setloading(false);
             }
 
@@ -34,22 +34,27 @@ export const Loadmoredata = () => {
 
 
 
-    
+
 
     return (
-        <div>
+        <div className='flex flex-col gap-5'>
+            <div className='grid grid-cols-4 gap-3'>
             {
                 loading ? <div>Loading... please wait</div> : error ? <div>Error: {error}</div> : <div>{
-                    products&&products.length>0?
-                    products.map(item => (<ul key={item.id}>
-                        {item}
-                    </ul>)):"no data to show "
+                    products && products.length > 0 ?
+                        products.map(item => (
+                        <div className='flex flex-col justify-center items-center gap-3 w-[250px]   p-5 border-2 border-black' key={item.id}>
+                            <img className='w-[180px] h-[180px]' src={item.thumbnail} alt={item.title}/>
+                            <h3>{item.title}</h3>
+                        </div>)) : "no data to show "
 
 
                 }</div>
 
 
+                
             }
+            </div>
 
         </div>
 

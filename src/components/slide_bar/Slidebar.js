@@ -14,9 +14,9 @@ export const Slidebar = ({url,limit,page}) => {
         const response=await fetch(`${geturl}?page=${page}&limit=${limit}`);
         const data=await response.json();
         
-        
+        console.log(data)
         if(data){
-            console.log(image);
+            // console.log(image);
             setloading(false);
             setimage(data)
         }
