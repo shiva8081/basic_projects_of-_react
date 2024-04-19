@@ -5,6 +5,7 @@ import { Color } from './components/Color';
 import { Star } from './components/Star';
 import { Accordian } from './components/accordian/Accordian';
 import { Loadmoredata } from './components/loadmore_data/Loadmoredata';
+import { Qr } from './components/qr_generator/Qr';
 import { Slidebar } from './components/slide_bar/Slidebar';
 
 function App() {
@@ -24,7 +25,10 @@ function App() {
       {/* <Slidebar url="https://picsum.photos/v2/list" page="1" limit="10" /> */}
 
       {/* load more data */}
-      <Loadmoredata />
+      {/* <Loadmoredata /> */}
+
+      {/* qr code generator */}
+      <Qr/>
 
 
     </div>
