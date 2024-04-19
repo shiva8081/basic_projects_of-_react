@@ -6,6 +6,7 @@ import { Star } from './components/Star';
 import { Accordian } from './components/accordian/Accordian';
 import { Loadmoredata } from './components/loadmore_data/Loadmoredata';
 import { Qr } from './components/qr_generator/Qr';
+import { Scroll } from './components/scroll_indicator/Scroll';
 import { Slidebar } from './components/slide_bar/Slidebar';
 
 function App() {
@@ -28,7 +29,10 @@ function App() {
       {/* <Loadmoredata /> */}
 
       {/* qr code generator */}
-      <Qr/>
+      {/* <Qr/> */}
+
+      {/* Scroll indicator */}
+      <Scroll url={"https://dummyjson.com/products?limit=100"} />
 
 
     </div>
