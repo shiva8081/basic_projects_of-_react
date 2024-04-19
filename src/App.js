@@ -8,6 +8,7 @@ import { Loadmoredata } from './components/loadmore_data/Loadmoredata';
 import { Qr } from './components/qr_generator/Qr';
 import { Scroll } from './components/scroll_indicator/Scroll';
 import { Slidebar } from './components/slide_bar/Slidebar';
+import { Tab } from './components/tab test/Tab';
 
 function App() {
   return (
@@ -32,7 +33,10 @@ function App() {
       {/* <Qr/> */}
 
       {/* Scroll indicator */}
-      <Scroll url={"https://dummyjson.com/products?limit=100"} />
+      {/* <Scroll url={"https://dummyjson.com/products?limit=100"} /> */}
+
+      {/* tabtest */}
+      <Tab/>
 
 
     </div>

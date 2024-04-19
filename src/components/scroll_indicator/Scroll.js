@@ -40,9 +40,9 @@ export const Scroll = ({ url }) => {
     }, [])
 
     return (
-        <div>
+        <div className="flex flex-col">
             <div className='bg-slate-500  mb-9 w-full h-16  text-white rounded-b-lg shadow-xl text-5xl flex justify-center items-center fixed top-0 '>Custom Scroll Indicator</div>
-            <div className="pt-16 ">
+            <div className="pt-16 op">
                 {
                     value ? value.map((item) => (
                         <div className="my-3 text-lg" key={item.id}>{item.title}</div>
