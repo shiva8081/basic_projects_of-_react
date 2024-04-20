@@ -4,6 +4,7 @@ import './App.css';
 import { Color } from './components/Color';
 import { Star } from './components/Star';
 import { Accordian } from './components/accordian/Accordian';
+import { Git } from './components/gihubprofile/Git';
 import { Loadmoredata } from './components/loadmore_data/Loadmoredata';
 import { Modal } from './components/modal test/Modal';
 import { Qr } from './components/qr_generator/Qr';
@@ -40,7 +41,10 @@ function App() {
       {/* <Tab/> */}
 
       {/* modaltest */}
-      <Modal/>
+      {/* <Modal/> */}
+
+      {/* githubprofile */}
+      <Git />
 
 
     </div>
