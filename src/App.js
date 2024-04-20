@@ -5,6 +5,7 @@ import { Color } from './components/Color';
 import { Star } from './components/Star';
 import { Accordian } from './components/accordian/Accordian';
 import { Loadmoredata } from './components/loadmore_data/Loadmoredata';
+import { Modal } from './components/modal test/Modal';
 import { Qr } from './components/qr_generator/Qr';
 import { Scroll } from './components/scroll_indicator/Scroll';
 import { Slidebar } from './components/slide_bar/Slidebar';
@@ -36,7 +37,10 @@ function App() {
       {/* <Scroll url={"https://dummyjson.com/products?limit=100"} /> */}
 
       {/* tabtest */}
-      <Tab/>
+      {/* <Tab/> */}
+
+      {/* modaltest */}
+      <Modal/>
 
 
     </div>

@@ -25,7 +25,7 @@ export const Tab = () => {
                 tabs && tabs.length ? tabs.map((item, index) => (
 
                     <div key={index + 1} onClick={() => setstate(index + 1)} className=' mt-5  '>
-                        <div className='flex flex-col justify-center items-center border-2 bg-slate-500 border-black m-1 w-32 h-16 '> {item.label} </div>
+                        <div className={`flex flex-col justify-center items-center border-2 ${state===index+1?'bg-[#a1d500]':'bg-slate-500'}  border-black m-1 w-32 h-16 `}> {item.label} </div>
 
 
                        
@@ -35,7 +35,7 @@ export const Tab = () => {
                 )) : null
              
             }
-            <div className='flex absolute top-32 text-2xl'>
+            <div className='flex absolute top-32 text-2xl text-red-500'>
                 {
                     tabs&&tabs.length?(tabs[state-1].content):null
                 }
