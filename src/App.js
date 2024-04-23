@@ -11,6 +11,7 @@ import { Qr } from './components/qr_generator/Qr';
 import { Scroll } from './components/scroll_indicator/Scroll';
 import { Slidebar } from './components/slide_bar/Slidebar';
 import { Tab } from './components/tab test/Tab';
+import { TicTac } from './components/tic tac to/TicTac';
 
 function App() {
   return (
@@ -44,7 +45,10 @@ function App() {
       {/* <Modal/> */}
 
       {/* githubprofile */}
-      <Git />
+      {/* <Git /> */}
+
+      {/* tic tac to */}
+      <TicTac/>
 
 
     </div>
